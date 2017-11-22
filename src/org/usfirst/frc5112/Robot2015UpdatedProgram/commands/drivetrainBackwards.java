@@ -3,9 +3,9 @@ package org.usfirst.frc5112.Robot2015UpdatedProgram.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.Robot;
 
-public class drivetrainBackwards extends Command {
+public class DrivetrainBackwards extends Command {
 
-    public drivetrainBackwards() {
+    public DrivetrainBackwards() {
     	requires(Robot.drivetrain);
     }
 
