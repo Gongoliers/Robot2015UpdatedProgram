@@ -19,17 +19,17 @@ public class Drivetrain extends Subsystem {
 		robotDrive.stopMotor();
 	}
 
-	public void forwards(double speed) {
-		robotDrive.drive(.5, 0);
+	public void rotateClockwise(double speed) {
+		robotDrive.drive(0, speed);
 	}
 
-	public void backwards(double speed) {
-		forwards(-speed);
+	public void rotateCounterCLockwise(double speed) {
+		rotateClockwise(-speed);
 	}
 
 	public void operatorControl(Joystick joystick) {
-		robotDrive.arcadeDrive(lessSensitive(joystick), joystick.getZ());
-//		robotDrive.arcadeDrive(joystick.getY(), joystick.getZ());
+//		robotDrive.arcadeDrive(lessSensitive(joystick), joystick.getZ());
+		robotDrive.arcadeDrive(joystick.getX(), joystick.getY());
 	}
 	
 	public double lessSensitive(Joystick stick) {

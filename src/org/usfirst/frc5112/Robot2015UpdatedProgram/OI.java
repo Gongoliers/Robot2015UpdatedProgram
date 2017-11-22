@@ -9,17 +9,17 @@ public class OI {
 
 	public JoystickButton joystickButtonOne;
     public JoystickButton joystickButtonTwo;
-    public JoystickButton joystickButtonThree;
+    public JoystickButton joystickButtonFive;
     public JoystickButton joystickButtonFour;
     public static Joystick joystick;
 
     public OI() {
         joystick = new Joystick(0);
         
-        joystickButtonFour = new JoystickButton(joystick, 1);
+        joystickButtonFour = new JoystickButton(joystick, 4);
         joystickButtonFour.whileHeld(new DrivetrainBackwards());
-        joystickButtonThree = new JoystickButton(joystick, 1);
-        joystickButtonThree.whileHeld(new DrivetrainForwards());
+        joystickButtonFive = new JoystickButton(joystick, 5);
+        joystickButtonFive.whileHeld(new DrivetrainForwards());
         joystickButtonTwo = new JoystickButton(joystick, 1);
         joystickButtonTwo.whileHeld(new StopDrivetrain());
         joystickButtonOne = new JoystickButton(joystick, 1);
