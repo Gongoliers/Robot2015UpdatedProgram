@@ -3,9 +3,9 @@ package org.usfirst.frc5112.Robot2015UpdatedProgram.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.Robot;
 
-public class stopDrivetrain extends Command {
+public class StopDrivetrain extends Command {
 
-    public stopDrivetrain() {
+    public StopDrivetrain() {
     	requires(Robot.drivetrain);
     }
 
