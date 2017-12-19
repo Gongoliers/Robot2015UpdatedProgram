@@ -57,10 +57,15 @@ public class OI {
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
-        SmartDashboard.putData("stopDrivetrain", new StopDrivetrain());
-        SmartDashboard.putData("drivetrainForwards", new DrivetrainForwards());
-        SmartDashboard.putData("drivetrainBackwards", new DrivetrainBackwards());
-        SmartDashboard.putData("stopPulley", new StopPulley());
+        SmartDashboard.putData("StopDrivetrain", new StopDrivetrain());
+        SmartDashboard.putData("DrivetrainForwards", new DrivetrainForwards());
+        SmartDashboard.putData("DrivetrainBackwards", new DrivetrainBackwards());
+        SmartDashboard.putData("StopPulley", new StopPulley());
+        SmartDashboard.putData("DecreasePulleySpeed", new DecreasePulleySpeed());
+        SmartDashboard.putData("IncreasePulleySpeed", new IncreasePulleySpeed());
+        SmartDashboard.putData("RunPulleyClockwise", new RunPulleyClockwise());
+        SmartDashboard.putData("RunPulleyCounterClockwise", new RunPulleyCounterclockwise());
+        
         
         SmartDashboard.putNumber("Pulley Current Speed Value is: ", Robot.pulley.speedValue);
     }
