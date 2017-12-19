@@ -15,7 +15,7 @@ public class Drivetrain extends Subsystem {
 	private final SpeedController leftRearMotorController = RobotMap.drivetrainleftRearMotorController;
 	private final SpeedController rightRearMotorController = RobotMap.drivetrainrightRearMotorController;
 	private final SpeedController rightFrontMotorController = RobotMap.drivetrainrightFrontMotorController;
-	private final RobotDrive robotDrive = RobotMap.drivetrainRobotDrive41;
+	private final RobotDrive robotDrive = RobotMap.robotDrive;
 
 	public void initDefaultCommand() {
 		setDefaultCommand(new OperatorControl());
