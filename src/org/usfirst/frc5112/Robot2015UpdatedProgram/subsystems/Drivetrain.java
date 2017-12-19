@@ -1,7 +1,7 @@
 package org.usfirst.frc5112.Robot2015UpdatedProgram.subsystems;
 
 import org.usfirst.frc5112.Robot2015UpdatedProgram.RobotMap;
-import org.usfirst.frc5112.Robot2015UpdatedProgram.commands.*;
+import org.usfirst.frc5112.Robot2015UpdatedProgram.drivetrainCommands.OperatorControl;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;

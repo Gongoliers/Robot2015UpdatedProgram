@@ -1,7 +1,8 @@
 package org.usfirst.frc5112.Robot2015UpdatedProgram.subsystems;
 
 import org.usfirst.frc5112.Robot2015UpdatedProgram.RobotMap;
-import org.usfirst.frc5112.Robot2015UpdatedProgram.commands.*;
+import org.usfirst.frc5112.Robot2015UpdatedProgram.pulleyCommands.StopPulley;
+
 import edu.wpi.first.wpilibj.SpeedController;
 
 import edu.wpi.first.wpilibj.command.Subsystem;

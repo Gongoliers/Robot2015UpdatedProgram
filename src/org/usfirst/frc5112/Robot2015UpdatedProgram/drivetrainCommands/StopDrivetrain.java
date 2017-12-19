@@ -1,4 +1,4 @@
-package org.usfirst.frc5112.Robot2015UpdatedProgram.commands;
+package org.usfirst.frc5112.Robot2015UpdatedProgram.drivetrainCommands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.Robot;

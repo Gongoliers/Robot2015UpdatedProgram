@@ -1,13 +1,13 @@
-package org.usfirst.frc5112.Robot2015UpdatedProgram.commands;
+package org.usfirst.frc5112.Robot2015UpdatedProgram.pulleyCommands;
 
 import org.usfirst.frc5112.Robot2015UpdatedProgram.Robot;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.subsystems.Pulley;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class RunPulleyClockwise extends Command {
+public class RunPulleyCounterclockwise extends Command {
 
-    public RunPulleyClockwise() {
+    public RunPulleyCounterclockwise() {
     	requires(new Pulley());
     }
 
@@ -16,7 +16,7 @@ public class RunPulleyClockwise extends Command {
     }
 
     protected void execute() {
-    	Robot.pulley.runClockwise(Robot.pulley.speedValue);
+    	Robot.pulley.runCounterclockwise(Robot.pulley.speedValue);
     }
 
     protected boolean isFinished() {

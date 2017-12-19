@@ -1,21 +1,20 @@
-package org.usfirst.frc5112.Robot2015UpdatedProgram.commands;
-
-import org.usfirst.frc5112.Robot2015UpdatedProgram.OI;
-import org.usfirst.frc5112.Robot2015UpdatedProgram.Robot;
+package org.usfirst.frc5112.Robot2015UpdatedProgram.drivetrainCommands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import org.usfirst.frc5112.Robot2015UpdatedProgram.Robot;
 
-public class OperatorControl extends Command {
+public class DrivetrainForwards extends Command {
 
-    public OperatorControl() {
+    public DrivetrainForwards() {
     	requires(Robot.drivetrain);
     }
 
     protected void initialize() {
+    	Robot.drivetrain.stop();
     }
 
     protected void execute() {
-    	Robot.drivetrain.operatorControl(OI.joystick);
+    	Robot.drivetrain.backwards(.25);
     }
 
     protected boolean isFinished() {
