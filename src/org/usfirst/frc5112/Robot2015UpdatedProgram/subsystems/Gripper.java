@@ -1,5 +1,8 @@
 package org.usfirst.frc5112.Robot2015UpdatedProgram.subsystems;
 
+import org.usfirst.frc5112.Robot2015UpdatedProgram.RobotMap;
+
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -7,12 +10,25 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Gripper extends Subsystem {
 
-    // Put methods for controlling this subsystem
-    // here. Call these from Commands.
-
+	public Solenoid gripperSolenoid = RobotMap.gripper;
+	
     public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
+    	
+    	
+    	
     }
+    
+    public void openGripper() {
+    	
+    	gripperSolenoid.set(false);
+    	
+    }
+    
+    public void closeGripper() {
+    	
+    	gripperSolenoid.set(true);
+    	
+    }
+    
 }
 

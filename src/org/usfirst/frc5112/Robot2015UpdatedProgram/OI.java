@@ -4,6 +4,8 @@ import org.usfirst.frc5112.Robot2015UpdatedProgram.autonomousCommands.*;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.drivetrainCommands.DrivetrainBackwards;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.drivetrainCommands.DrivetrainForwards;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.drivetrainCommands.StopDrivetrain;
+import org.usfirst.frc5112.Robot2015UpdatedProgram.gripperCommands.CloseGripper;
+import org.usfirst.frc5112.Robot2015UpdatedProgram.gripperCommands.OpenGripper;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.pulleyCommands.DecreasePulleySpeed;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.pulleyCommands.IncreasePulleySpeed;
 import org.usfirst.frc5112.Robot2015UpdatedProgram.pulleyCommands.RunPulleyClockwise;
@@ -25,7 +27,10 @@ public class OI {
 	public JoystickButton joystickButtonSix;
 	public JoystickButton joystickButtonSeven;
 	public JoystickButton joystickButtonEight;
-    public static Joystick joystick;
+    public JoystickButton joystickButtonEleven;
+    public JoystickButton joystickButtonTwelve;
+    
+	public static Joystick joystick;
 
     public OI() {
     	//Joystick
@@ -51,9 +56,15 @@ public class OI {
         joystickButtonTwo = new JoystickButton(joystick, 1);
         joystickButtonTwo.whileHeld(new StopDrivetrain());
        
-        //Pulley Stop Button
+        // Pulley Stop Button
         joystickButtonOne = new JoystickButton(joystick, 1);
         joystickButtonOne.whileHeld(new StopPulley());
+        
+        // Gripper
+        joystickButtonEleven = new JoystickButton(joystick, 11);
+        joystickButtonEleven.whenPressed(new OpenGripper());
+        joystickButtonTwelve = new JoystickButton(joystick, 12);
+        joystickButtonTwelve.whenPressed(new CloseGripper());
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());

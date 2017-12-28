@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class DecreasePulleySpeed extends Command {
 
     public DecreasePulleySpeed() {
-    	requires(new Pulley());
+    	requires(Robot.pulley);
     }
 
     protected void initialize() {

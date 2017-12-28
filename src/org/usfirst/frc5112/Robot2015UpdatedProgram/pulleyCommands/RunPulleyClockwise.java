@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class RunPulleyClockwise extends Command {
 
     public RunPulleyClockwise() {
-    	requires(new Pulley());
+    	requires(Robot.pulley);
     }
 
     protected void initialize() {

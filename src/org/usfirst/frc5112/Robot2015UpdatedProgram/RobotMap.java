@@ -18,6 +18,8 @@ public class RobotMap {
     public static SpeedController pulleypulleyMotorController;
 
     public static void init() {
+    	
+    	
         drivetrainleftFrontMotorController = new Victor(2);
         LiveWindow.addActuator("Drivetrain", "leftFrontMotorController", (Victor) drivetrainleftFrontMotorController);
         
@@ -40,9 +42,11 @@ public class RobotMap {
 
         robotDrive.setInvertedMotor(RobotDrive.MotorType.kFrontRight, true);
         robotDrive.setInvertedMotor(RobotDrive.MotorType.kRearRight, true);
+        robotDrive.setInvertedMotor(RobotDrive.MotorType.kRearLeft, true);
+        robotDrive.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, true);
         pulleypulleyMotorController = new Jaguar(4);
         LiveWindow.addActuator("Pulley", "pulleyMotorController", (Jaguar) pulleypulleyMotorController);
         
-        gripper = new Solenoid(0);
+        gripper = new Solenoid(0);	
     }
 }
